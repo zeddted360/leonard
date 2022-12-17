@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(45, 60,255,.3);
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+.header{
+height:20vh;
+background: url("./leobg2.jpg") no-repeat center center/cover;
+text-align: center;
+position: relative;
+font-size: bold;
+margin-bottom: 2px;
+border-radius: 5px;
+animation-name: change;
+animation-duration: 30s;
+animation-timing-function: ease;
+animation-iteration-count: infinite;
+animation-delay: 0s;
+animation-fill-mode: both;
+}
+.header h1{
+    font-size: 3rem;
+}
+i.header{
+    font-size: 1.5rem;
+    background: transparent;
+}
+.main{
+    height: 60vh;  
+    display: flex;
+    flex-direction: row;
+}
+.main>div{
+background-color: white;
+margin: 2px;
+text-align: center;
+border-radius: 5px;
+}
+.left,.right{
+    flex:1;
+    overflow-x: auto;
+}
+.center{
+    flex:11;
+}
+.footer{
+    height: 20vh;
+    background: rgba(120,120,130,.1);
+    border-radius: 5px;
+    margin-top: 2px;
+    opacity: .9;
+    text-align: center;
+    color: rgba(0,0,0,1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+svg{
+    height: 2rem;
+}
+.footer>span{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+span:first-of-type{
+    margin-right: 9rem;
+}
+.link:first-of-type{
+    background-color:rgba(20,255,20,.5);
+}
+.link,.hanker{
+    display: block;
+    list-style-type: none;
+    text-decoration: none;
+    margin-top: 2px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 2px;
+    transition: .5s;
+}
+.link:hover,.hanker:hover{
+    background: rgba(100,100,100,.4);
+    color:white;
+}
+.center{
+    background: url(./leobg1.jpg) no-repeat center center/cover;
+}
+.right{
+    padding: 5px;
+    font-size: 1.2rem;
+}
+@keyframes change{
+    0%{background: url(./leobg2.jpg);}
+    25%{background: url(./leobg1.jpg);}
+    50%{background: url(./leoim1.jpg);}
+    75%{background: url(./leoim2.jpg);}
+    100%{background: url(./leoim3.jpg);}
+}
+.bar-icon{
+    width: fit-content;
+    color:white;
+    text-align: end;
+    position: absolute;
+    right: 1rem;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: bold;
+    transition:.5s;
+}
+.bar-icon:hover{
+    background-color: lightgrey;
+    color: black;
+}.bar-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #f3f3f3;
+    margin: 4px;
+}
+.bar-links>a{
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    border:solid 2px #f9f9f9;
+    box-shadow: 2px 2px 4px;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .5s;
+    margin-top: 4px;
+}
+.bar-links>a:first-child{
+    background-color: rgba(20,255,20,.5);
+}
+.bar-links>a:hover{
+    background-color: rgba(100,100,100,.4);
+    color:white;
+}
+.hidden{
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .main{
+        display: flex;
+        flex-direction: row;
+    }
+    .left,.right{
+        flex: 1;
+    }
+    .center{
+        flex: 11;
+    }
+    .bar-icon{
+        display:none;
+    }
+}
+@media (max-width: 768px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        display:none;
+    }
+    .center,.right{
+        flex: 1;
+    }
+}
+@media (max-width: 576px) {
+    .container{
+        height: 100vh;
+        width: 100vw;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        display:none;
+    }
+    .center,.right{
+        flex: 1;
+    }
+}
+
+
